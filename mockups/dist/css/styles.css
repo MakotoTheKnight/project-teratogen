@@ -6539,3 +6539,10 @@ body > .container > .row {
   height: 100%;
   padding-bottom: 20px;
 }
+.category-btn {
+  display: block;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
