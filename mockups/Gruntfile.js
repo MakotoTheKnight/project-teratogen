@@ -10,7 +10,8 @@ module.exports = function (grunt) {
       dev: {
         files: [
           { src: ['src/index.html'], dest: '<%= distdir %>/index.html' },
-          { src: ['lib/bootstrap/js/bootstrap.min.js'], dest: '<%= distdir %>/js/bootstrap.min.js' },
+          { src: ['bower_components/bootstrap/dist/js/bootstrap.min.js'], dest: '<%= distdir %>/js/bootstrap.min.js' },
+          { src: ['bower_components/jquery/dist/jquery.min.js'], dest: '<%= distdir %>/js/jquery.min.js' },
           { expand: true, cwd: 'src/js/', src: ['*.js'], dest: '<%= distdir %>/js/', filter: 'isFile' }
         ]
       }
@@ -40,4 +41,4 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['clean', 'less', 'copy']);
-}
+};

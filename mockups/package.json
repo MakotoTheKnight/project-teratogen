@@ -3,11 +3,8 @@
   "version": "0.0.1",
   "description": "This is a package of mockups to use in the development of the greater teratogen project.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Nephi Wright",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
