@@ -34,6 +34,12 @@ module.exports = function (grunt) {
       options: {
         debounceDelay: 500
       }
+    },
+    connect: {
+      dist: {
+        port: 4000,
+        base: '<%= distdir %>'
+      }
     }
   });
 
@@ -41,6 +47,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-connect');
 
   grunt.registerTask('default', ['clean', 'less', 'copy']);
+
+  grunt.registerTask('serve', ['default', 'connect:dist']);
 };
