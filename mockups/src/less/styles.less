@@ -32,26 +32,86 @@
 @import "../../bower_components/bootstrap/less/utilities";
 @import "../../bower_components/bootstrap/less/responsive-utilities";
 
-.main-canvas {
+html, body {
   height: 100%;
-  overflow: hidden;
-  padding: @grid-gutter-width / 2;
-  border: solid 1px @gray-dark;
 }
 
-.side-bar {
+.wrapper, .row {
   height: 100%;
-  border: solid 1px @gray-dark;
-  padding: @grid-gutter-width / 2;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-body > .container {
-  height: 100%;
+.wrapper:before, .wrapper:after,
+.column:before, .column:after {
+  content: "";
+  display: table;
+}
 
-  > .row {
-    height: 100%;
-    padding-bottom: 20px;
+.wrapper:after,
+.column:after {
+  clear: both;
+}
+
+.column {
+  height: 100%;
+  overflow: auto;
+  *zoom: 1;
+}
+
+.column .padding {
+  padding: 20px;
+}
+
+.box {
+  bottom: 0; /* increase for footer use */
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #003300;
+}
+
+.divider {
+  margin-top: 32px;
+}
+
+#main {
+  background-color: #fefefe;
+}
+
+#main .img-circle {
+  margin-top: 18px;
+  height: 70px;
+  width: 70px;
+}
+
+#sidebar, #sidebar a {
+  color: #ffffff;
+  background-color: transparent;
+  text-shadow: 1px 0 1px #888888;
+}
+
+#sidebar-footer {
+  position: absolute;
+  bottom: 5px;
+}
+
+#footer {
+  margin-bottom: 20px;
+}
+
+/* center and adjust the sidebar contents on smaller devices */
+@media (max-width: 768px) {
+  #sidebar, #sidebar a.logo {
+    text-align: center;
+    margin: 30px auto 0;
+    font-size: 26px;
   }
+}
+
+.search-bar {
+  margin-top: 12px;
 }
 
 .category-btn {

@@ -11,8 +11,10 @@ module.exports = function (grunt) {
         files: [
           { src: ['src/index.html'], dest: '<%= distdir %>/index.html' },
           { src: ['bower_components/bootstrap/dist/js/bootstrap.min.js'], dest: '<%= distdir %>/js/bootstrap.min.js' },
+          { src: ['bower_components/jquery/dist/jquery.min.map'], dest: '<%= distdir %>/js/jquery.min.map' },
           { src: ['bower_components/jquery/dist/jquery.min.js'], dest: '<%= distdir %>/js/jquery.min.js' },
-          { expand: true, cwd: 'src/js/', src: ['*.js'], dest: '<%= distdir %>/js/', filter: 'isFile' }
+          { expand: true, cwd: 'src/js/', src: ['*.js'], dest: '<%= distdir %>/js/', filter: 'isFile' },
+          { expand: true, cwd: 'bower_components/bootstrap/fonts', src: ['*'], dest: '<%= distdir %>/fonts/', filter: 'isFile' }
         ]
       }
     },

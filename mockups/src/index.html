@@ -1,35 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mockup One</title>
-    <link href="css/styles.css" rel="stylesheet">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mockup One</title>
+  <link href="css/styles.css" rel="stylesheet">
 
-  </head>
-  <body style="height: 100%">
-    <div class="container">
-      <div class="row">
-        <div class="side-bar col-md-3">
-          <a class="category-btn" data-category="artist"><h1>Artists</h1></a>
-          <a class="category-btn" data-category="album"><h1>Albums</h1></a>
-          <a class="category-btn" data-category="genre"><h1>Genres</h1></a>
-          <a class="category-btn" data-category="play-list"><h1>Play Lists</h1></a>
-          <div class="divider"></div>
-        </div>
-        <div class="main-canvas col-md-9">
-          <div class="canvas-body empty"></div>
-          <div class="canvas-body artist hidden">Here we show a list of the artists in the database</div>
-          <div class="canvas-body album hidden">Here we show a list of albums in the database</div>
-          <div class="canvas-body genre hidden">Here we show a list of genres in the database</div>
-          <div class="canvas-body play-list hidden">Here we show a list of play-lists that have already been created</div>
+</head>
+<body>
+<div class="wrapper">
+  <div class="box">
+    <div class="row">
+      <!-- sidebar -->
+      <div class="column col-sm-3" id="sidebar">
+        <ul class="nav">
+          <div class="input-group search-bar">
+            <span class="input-group-addon" id="search-addon">
+              <span class="glyphicon glyphicon-search"></span>
+            </span>
+            <input type="text" class="form-control" placeholder="Search for...">
+          </div>
+          <li class="active"><a class="category-btn" data-category="artist">Artists</a></li>
+          <li><a class="category-btn" data-category="album">Albums</a></li>
+          <li><a class="category-btn" data-category="genre">Genres</a></li>
+          <li><a class="category-btn" data-category="play-list">Play Lists</a></li>
+        </ul>
+        <ul class="nav hidden-xs" id="sidebar-footer">
+          <li>Developed by Art of Code members.</li>
+        </ul>
+      </div>
+      <div class="column col-sm-9" id="main">
+        <div class="padding">
+          <div class="full col-sm-9">
+            <div class="canvas-body empty"></div>
+            <div class="canvas-body artist hidden">Here we show a list of the artists in the database</div>
+            <div class="canvas-body album hidden">Here we show a list of albums in the database</div>
+            <div class="canvas-body genre hidden">Here we show a list of genres in the database</div>
+            <div class="canvas-body play-list hidden">Here we show a list of play-lists that have already
+              been created
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
 </html>
